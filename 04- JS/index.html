@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="alert('hello world')">click me!</button>
+    <button onmouseover="console.log('hello world')">click me again!</button>
+    <button onmouseover="console.log('hello man')" onclick="console.log('hello world')">click me!</button>
+
+    <hr>
+
+
+    <script>
+        // 01- data type 
+
+        // var a = "hello world";
+        // console.log(a)
+        // console.log(typeof(a))
+
+        // var b = 56;
+        // console.log(b,typeof(b));
+
+        // var c;
+        // console.log(c,typeof(c));
+
+        // var d = undefined;
+        // console.log(d,typeof(d));
+
+        // var e = true;
+        // console.log(e,typeof(e));
+
+        // var f = [];
+        // console.log(f,typeof(f));
+
+        // var g = {};
+        // console.log(g,typeof(g));
+
+        // var h = BigInt(9999999999);
+        // console.log(h,typeof(h));
+
+        // var I = Symbol("I");
+        // console.log(I,typeof(I));
+
+        //--------- 02 - legal var name and illegal name 
+
+        var name;
+        var _name;
+        var first_name; // snake case writing;
+        var firstName; // camel case writing;
+        var $name;
+        var name1st;
+
+        // illegal name 
+
+        // var name-first; // paskal case writing;
+        // var &name;
+        // var #name;
+        // var \name;
+        // var 5name;
+        // var `name;
+
+        // 03- concatenation 
+
+        // var a = "hello world";
+        // var b = 30;
+        // var c = 50;
+        // console.log(a + b + c);
+
+        // var a = "hello";
+        // var b = 40;
+        // var c = a + b;
+        // console.log(c);
+
+        // 04- math ambiguity problem
+
+        // var a = 5 / 9 + 40 + (((50 - 30) * 5) /4);
+        // console.log(a);
+
+        // 05- Math numbers 
+
+        // var a = Math.round(5.512212)
+        // console.log(a)
+
+        // var b = Math.floor(5.199999)
+        // console.log(b)
+
+        // var c = Math.ceil(5.00011111)
+        // console.log(c)
+
+        // var d = Math.random();
+        // console.log(d)
+
+        // var e = Math.round(Math.random() * 10);
+        // console.log(e)
+
+        // var a = prompt("Enter your name","Shoaib Raza");
+        // console.log(a,typeof(a));
+
+        // var b = Number(prompt("Enter your age"))
+        // console.log(b,typeof(b));
+
+        // var c = parseFloat(prompt("Enter your age"))
+        // console.log(c,typeof(c));
+
+        // var d = parseInt(prompt("Enter your age"))
+        // console.log(d,typeof(d));
+
+        // 06- if statement 
+
+        // var a = 10;
+        // if(a === 10){
+        //     console.log("hello world!");
+        // }else{
+        //     console.log("hello world != 10")
+        // }
+
+        // var a = 89;
+
+        // if(a >= 80 && a <=89){
+        //     console.log("pass A")
+        // }else if(a >= 90){
+        //     console.log("pass A++")
+        // }else{
+        //     console.log("Fail")
+        // }
+
+        // var a = 10;
+        // var b = 20;
+
+        // if(a === 10 || b === 21){
+        //     console.log("pass")
+        // }else{
+        //     console.log("fail")
+        // }
+
+        // height >= 5,
+        // education >= 14, 
+        // age >= 18,
+
+        // var h = Number(prompt("Enter your height"))
+        // var e = Number(prompt("Enter your education"))
+        // var a = Number(prompt("Enter your age"))
+        // if( (h >= 5 && e >=14) || (e >= 14 && a >=18) || (h >= 5 && a >=18)){
+        //     console.log("Pass")
+        // }else{
+        //     console.log("Fail")
+        // }
+
+        // 07- nested if statement 
+
+        // var a = 10;
+        // var b = 20;
+        // var c = 30;
+
+        // if (a === 11) {
+        //     if (b === 20) {
+        //         console.log("your a and b are right")
+        //     } else {
+        //         console.log("your a is right and b is wrong")
+        //     }
+        // } else {
+        //     console.log("empty")
+        // }
+
+
+        // 08- arrays
+
+        // var arr = ["Umar","Usama","Alam ali","shrafat ali"];
+        // arr[0] = "Asad"
+        // arr[9] = "Huzaifa"
+
+        // arr.push("asad","Huzaifa");
+        // arr.pop();
+
+        // arr.unshift("asad","Uzma")
+        // arr.shift();
+
+        // arr.splice(1,2,"zaibullah");
+        // console.log(arr,typeof(arr));
+
+        // var index = arr.length -1
+        // console.log(index)
+
+        // var sl = arr.slice(0)
+        // console.log("slice ",sl);
+
+        // var a = Math.round(Math.random() * 10);
+        // console.log(a);
+        // var b = Number(prompt("Enter your value"));
+        // console.log(b);
+        // if(a === b){
+        //     console.log("Pass")
+        // }else{
+        //     console.log("Fail")
+        // }
+
+        // 09- loops
+
+        // A - for loop 
+
+        // for(var i = 1; i <=10; i++){
+        // console.log( i + " Pakistan hello world hi buddy" + "hello ")  ///concatenation
+        // console.log(`${i} Pakistan Zindabad you are paindabad hello`) /// template literal
+        // }
+
+        // for (var i =0;i<5;i++){
+        //     document.write(i);
+        // }
+
+        // for(var i = 1;i<=10;i++){
+        //     console.log(3 + "*" + i + " = " + (i*3) )
+        // }
+
+
+
+        // B - while loop
+
+        // let i = 0;
+        // while(i<10){
+        //     console.log("Pakistan")
+        //     i++
+        // }
+
+        // C - do while loop
+
+        // let i = 0;
+        // do{
+        //     console.log("Pakistan")
+        //     i++
+        // }while(i < 0);
+
+
+        // D - forEach loop
+
+        var cars = ["BMW", "ferrari", "mercedes", "motor"]
+        // cars.forEach( (ele,i) => console.log( i + " " +ele))
+
+
+        // E - map loop
+
+        // cars.map( (ele,i) => console.log(i + ele))
+
+        // F - for of loop
+        // for(val of cars){
+        //     console.log(val)
+        // }
+
+        // G - for in loop
+
+        // for(key in cars){
+        //     console.log(key)
+        // }
+
+
+
+        // 10 - function 
+
+        // function s(p,y){
+        //     console.log("hello world" + p + y)
+        // }
+
+        // s("hi","p wala");
+        // s("hello world","p week")
+        // s(`45`,40,"hello world")
+
+        // function s(){
+        //     return "hello world";
+        // }
+        // console.log( s() )
+
+        // function s(){ return "hello world"};
+
+        // const p = ()=>  "hello world";
+
+        // var y = ()=> { console.log("hello world")}
+        // y();
+
+        // var u = function() { console.log("hello world anonymous function")};
+        // u();
+
+        // (function(){
+        //     console.log("hello world IIFE :Imidiatly invoked Function Expression");
+        // })();
+
+        // !function(){
+        //     console.log("IIFE :Imidiatly invoked Function Expression")
+        // }()
+
+        // 11 switch statement 
+
+        // var ab = 30;
+        // switch(ab){
+        //     case 10: console.log("your value is 10"); break;
+        //     case 20: console.log("your value is 20"); break;
+        //     default: console.log("your value neither 10 nor 20");
+        // }
+
+        // 12 global variables local variables 
+
+
+        // var b = 20;
+        // function t(){
+        //     var a = 10;
+        //     console.log(a + " " + b)
+        // }
+        // t();
+        // function s(){
+        //     console.log(a)
+        // }
+        // s();
+        // console.log(a + " " + b);
+
+        // var cars = "Ferrari"
+        // console.log(cars.toUpperCase())
+        // console.log(cars.toLowerCase())
+
+        // var cars = ["Ferrari", "BMW", "Kia"];
+        // console.log(cars.toUpperCase())
+        // for(var i = 0; i < cars.length; i++){
+        //     console.log(cars[i].toUpperCase());
+        //     console.log(cars[i].toLocaleLowerCase());
+        // }
+
+        //  var av = 56;
+        //   var ab = av.toString();
+        //  console.log(ab, typeof(ab))
+
+        // var cities = ["karachi", "islamabad", "lahore",];
+        // var city = prompt("Enter your city: ").toLowerCase();
+        // for (var i = 0; i < cities.length; i++) {
+        //     if (city === cities[i]) {
+        //         console.log("your city is clean already")
+        //     }
+        // }
+
+        // 13- OOP 
+
+        // 13-a Object 
+
+        // var obj1 = new Object();
+
+        // var obj = {
+        //     name:"Shoaib Raza",
+        //     age:25,
+        //     edu:"BSCS",
+        //     skills:["html","css","javascript","python","flasks","django"],
+        //     fullData:function(hello){
+        //         return "I am " + this.name + " and my age is " + this.age + "--"+ hello;
+        //     }
+        // };
+
+        // var obj2 = { name2:"hello world 2",name3:"hello world 3"}
+
+        // console.log(obj)
+        // console.log(obj.name);
+        // console.log(obj.age);
+        // console.log(obj.edu);
+        // console.log(obj.name,obj.age);
+
+        // console.log(Object.keys(obj));
+        // console.log(Object.values(obj));
+        // console.log(Object.entries(obj));
+
+        // console.log(obj.fullData("hello wrodl"));
+
+        // var data = Object.assign(obj,obj2)
+        // console.log(data)
+
+
+        // 13-b date and time 
+
+        var d = new Date();
+        var y = d.getFullYear();
+
+        var date = d.getDate();
+        var month = d.getMonth();
+        var day = d.getDay();
+        console.log(day);
+        console.log(d);
+        console.log("year",y)
+        console.log("date",date);
+        console.log("month",month)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
